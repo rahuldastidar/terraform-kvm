@@ -77,7 +77,7 @@ EOF
 resource "libvirt_domain" "vm" {
   count  = var.vm_count
   name   = "ubuntu-vm-${count.index + 1}"
-  memory = 8192
+  memory = 4096
   vcpu   = 2
 
   # Attach the unique disk for this VM
