@@ -87,7 +87,7 @@ resource "libvirt_domain" "vm" {
 
   # Attach the Cloud-Init ISO so packages get installed
   disk {
-    file = libvirt_cloudinit_disk.commoninit[count.index].path
+    file = libvirt_cloudinit_disk.commoninit[count.index].id
   }
 
   # Attach the Ubuntu Installation ISO (from your original command)
